@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
+    <title>PayPal Calculator</title>
+  </head>
+
+  <!-- Title -->
+  <body>
+    <header class="nav-header">
+      <h1 class="title"><a href="#" class="logo" id="logo"> PayPal <span style="font-size: 24px;">Calculator</span> </a></h1>
+      <nav class="navigation">
+        <ul>
+          <li class="burger"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+      </nav>
+
+    </header>
+<!-- End Title -->
+
+<!-- Header -->
+    <main>
+      
+      <div class="header">
+        <p>Welcome to PayPal Fee Calculator <br />
+        I want to make easy for you to know the exact amount of money <br> you need to
+        send or receive when doing a PayPal transaction. <br> The rates are updated for 2020! and in USD</p>
+    </div>
+<!-- End Header -->
+
+
+    <form onsubmit="event.preventDefault()" id="myForm">
+
+<!-- Sending PayPal -->
+      <h2>Sending PayPal</h2>
+      
+      <label for="" class="data-entry">
+        <h3>If I send:</h3>
+        <input type="number" class="send-input" id="input1" placeholder="Insert amount" value="$"/>
+        <button class="send-button" type="button" id="btn1" onclick="substract()">
+          <i class="fas fa-play"></i>
+        </button>
+      </label>
+      
+      <label for="" class="data-entry">
+        <h3>My contact will receive:</h3>
+        <p type="number" class="output-text" id="output1"></p> <span><button class="output-button" type="submit" data-clipboard-target="#output1">
+          <i class="fas fa-copy"></i> </span> 
+        </button>
+<!-- End Sending PayPal        -->
+        
+<!-- Receiving PayPal         -->
+        <h2>Receiving PayPal</h2>
+        
+        <label for="" class="data-entry">
+          <h3>If I want to receive:</h3>
+          <input type="number" class="receive-input" id="input2" placeholder="Insert amount"/>
+          <button class="send-button" type="submit" onclick="adding()">
+            <i class="fas fa-play"></i>
+          </button>
+          
+        </label>
+        
+        <label for="" class="data-entry">
+          
+          <h3>My contact must send:</h3>
+          
+          <div class="style=display: flex;"><p type="number" class="output-text" id="output2" ></p> 
+            <button class="output-button" type="submit" data-clipboard-target="#output2">
+              <i class="fas fa-copy"></i>
+              
+            </button>
+            
+          </div> 
+    </label>
+<!-- End Receiving PayPal -->
+  </form>
+</main>
+  
+
+
+<!-- Footer -->
+<section id="footer">
+  <div class="inner">
+    <h2 class="major">Get in touch</h2>
+    <p>If you want me to create a new calculator for another online payment platform, send me an email to <a href="mailto:contact@paypalcalculator.com" class="mail">contact@paypalcalculator.com</a>  and I will make it ;-)</p>
+   
+    <ul class="copyright">
+      <li class="legal">&nbsp; &nbsp; PayPal is a registered trademark of PayPal.</li><br>
+      <li>&copy; PayPay Calculator. All rights reserved.</li><li>Design: <a href="https://www.linkedin.com/in/plazaleonardo/">Leonardo Plaza</a> </li>
+    </ul>
+  </div>
+</section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="/scripts.js"></script>
+  </body>
+  </html>
