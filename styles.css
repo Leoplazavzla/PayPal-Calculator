@@ -59,7 +59,7 @@ body {
 
 .header p {
   padding-top: 15px;
-  min-height: 20vh;
+  /* min-height: 20vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +67,16 @@ body {
   font-size: 1.2rem;
   max-width: 90%;
   margin: auto;
+}
+
+.header .p1 {
+  font-size: 32px;
+}
+
+.header .p2 {
+  text-align: left;
+  max-width: 30%;
+  text-align: justify;
 }
 
 form {
@@ -131,7 +141,7 @@ form button:hover {
 .output-text:empty:before {
   color: white;
   font-size: 2rem;
-  content: "waiting for content";
+  content: "content";
 }
 
 /*.fa-redo {
@@ -250,7 +260,7 @@ input[type="number"] {
   }
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 770px) {
   #footer {
     margin-top: -2.5em;
     padding-top: 2.5em;
@@ -267,6 +277,20 @@ input[type="number"] {
   #footer .inner .contact {
     margin: 0 0 3em 0;
   }
+
+  .header .p1 {
+    text-align: center;
+    line-height: 120%;
+    padding-bottom: 15px;
+  }
+
+  .header .p2,
+  .header .p3 {
+    font-size: 20px;
+    text-align: left;
+    max-width: 80%;
+    text-align: justify;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -280,10 +304,97 @@ input[type="number"] {
   #footer .inner .copyright li:first-child {
     margin-top: 0;
   }
+
+  body {
+    max-width: 85%;
+    margin: auto;
+  }
+
+  .header p {
+    text-align: left;
+  }
+
+  .header .p1 {
+    text-align: center;
+    line-height: 120%;
+    padding-bottom: 15px;
+  }
+
+  .header .p2,
+  .header .p3 {
+    font-size: 20px;
+    text-align: left;
+    max-width: 80%;
+    text-align: justify;
+  }
+
+  .send-input,
+  .receive-input {
+    max-width: 277px;
+  }
+
+  .output-text {
+    min-width: 85%;
+  }
+
+  .fa-bars:before {
+    display: none;
+  }
+
+  .title {
+    text-align: center;
+  }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 361px) {
+  body {
+    margin: auto;
+  }
+
   #footer .inner {
     padding: 2em 1.5em 0.1em 1.5em;
+  }
+
+  #footer .inner .copyright li:first-child {
+    margin-top: 0;
+  }
+
+  .header .p1 {
+    text-align: center;
+    line-height: 120%;
+    padding-bottom: 15px;
+  }
+
+  .header .p2,
+  .header .p3 {
+    font-size: 20px;
+    text-align: left;
+    max-width: 80%;
+    text-align: justify;
+  }
+
+  body {
+    max-width: 90%;
+  }
+
+  .send-input,
+  .receive-input {
+    max-width: 227px;
+  }
+
+  .output-text {
+    min-width: 83%;
+  }
+
+  .fa-bars:before {
+    display: none;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 24px;
   }
 }
